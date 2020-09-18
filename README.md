@@ -1,4 +1,4 @@
-# MICROCHIP EERAM manipulation library
+# MICROCHIP EERAM library for 47C04 / 47C16
 
 - perform software EEPROM store/recall commands
 - manipulate various CONTROL REGISTER bits
