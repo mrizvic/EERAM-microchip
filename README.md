@@ -9,7 +9,7 @@ read/write null terminated strings
 I have MICROCHIP 47C16 serial EERAM hooked up to RPI via I2C pins therefore smbusDevice=1. Pins A1 and A2 are grounded so address is 0. Also capacitor is hooked between Vcap and GND in order perform copy SRAM to EEPROM in case of power outage. Note that ASE bit has to be set in order to enable this feature. See wiring and example usage below.
 
 ### WIRING DIAGRAM
-![rpi-eeram-wiring](http://)
+![rpi-eeram-wiring](https://github.com/mrizvic/EERAM-microchip/blob/master/rpi-eeram-wiring.png)
 
 ### USAGE:
 ```
