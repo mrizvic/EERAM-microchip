@@ -1,17 +1,17 @@
-### MICROCHIP EERAM manipulation library
+# MICROCHIP EERAM manipulation library
 
-perform software EEPROM store/recall commands
-manipulate various CONTROL REGISTER bits
-hexdump SRAM portions
-read/write single byte
-read/write null terminated strings
+- perform software EEPROM store/recall commands
+- manipulate various CONTROL REGISTER bits
+- hexdump SRAM portions
+- read/write single byte
+- read/write null terminated strings
 
 I have MICROCHIP 47C16 serial EERAM hooked up to RPI via I2C pins therefore smbusDevice=1. Pins A1 and A2 are grounded so address is 0. Also capacitor is hooked between Vcap and GND in order perform copy SRAM to EEPROM in case of power outage. Note that ASE bit has to be set in order to enable this feature. See wiring and example usage below.
 
-### WIRING DIAGRAM
+## WIRING DIAGRAM
 ![rpi-eeram-wiring](https://github.com/mrizvic/EERAM-microchip/blob/master/rpi-eeram-wiring.png)
 
-### USAGE:
+## USAGE:
 ```
 $ pip3 install smbus2
 $ python3
@@ -106,6 +106,7 @@ read chunk of bytes and possibly convert it to string
 ```
 
 manipulate with single byte
+```
 >>> e.hexdump(0,16)
 0x0000  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
 >>> e.readbyte(0)
@@ -117,3 +118,4 @@ True
 >>> e.hexdump(0,16)
 0x0000  00 ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
 >>>
+```
