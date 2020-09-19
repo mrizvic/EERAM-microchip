@@ -1,4 +1,4 @@
-# Python library for MICROCHIP EERAM 47C04 / 47C16
+# Python library for interfacing with MICROCHIP EERAM 47C04 / 47C16
 
 - perform software EEPROM store/recall commands
 - manipulate various CONTROL REGISTER bits
